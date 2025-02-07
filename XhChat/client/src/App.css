@@ -1,0 +1,429 @@
+.app-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* 全局样式覆盖 */
+.ant-layout {
+  height: 100%;
+}
+
+.ant-layout-sider {
+  background: #fff;
+}
+
+.ant-layout-header {
+  background: #fff;
+  padding: 0 24px;
+  line-height: 64px;
+  height: 64px;
+  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+}
+
+.ant-layout-content {
+  padding: 24px;
+  background: #f0f2f5;
+}
+
+/* 聊天容器样式 */
+.chat-container {
+  height: 100vh;
+  display: flex;
+}
+
+/* 左侧栏样式 */
+.chat-sider {
+  background: #fff;
+  border-right: 1px solid #e8e8e8;
+  overflow: hidden;
+  flex: 0 0 300px !important;
+  max-width: 300px !important;
+  min-width: 300px !important;
+}
+
+/* 用户信息区域 */
+.user-info {
+  padding: 16px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+/* Tabs 容器样式 */
+.ant-tabs-content {
+  height: calc(100vh - 65px);
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 按钮容器样式 */
+.ant-tabs-tabpane {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* 会话列表样式 */
+.conversation-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 16px;
+}
+
+/* 好友列表样式 */
+.friends-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 16px;
+}
+
+/* 聊天内容区域样式 */
+.chat-content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #fff;
+  position: relative;
+}
+
+/* 消息列表容器 */
+.messages-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 0;
+  background: #f5f5f5;
+}
+
+/* 消息输入区域 */
+.message-input {
+  padding: 16px 40px;
+  background: #fff;
+  border-top: 1px solid #e8e8e8;
+  display: flex;
+  gap: 8px;
+}
+
+/* 自定义滚动条样式 */
+.ant-tabs-content::-webkit-scrollbar,
+.conversation-list::-webkit-scrollbar,
+.friends-list::-webkit-scrollbar,
+.messages-container::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.ant-tabs-content::-webkit-scrollbar-thumb,
+.conversation-list::-webkit-scrollbar-thumb,
+.friends-list::-webkit-scrollbar-thumb,
+.messages-container::-webkit-scrollbar-thumb {
+  background: #d9d9d9;
+  border-radius: 3px;
+}
+
+.ant-tabs-content::-webkit-scrollbar-track,
+.conversation-list::-webkit-scrollbar-track,
+.friends-list::-webkit-scrollbar-track,
+.messages-container::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 3px;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* 确保 Tabs 内容区域可以滚动 */
+.ant-tabs-content-holder {
+  height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+.ant-tabs-content {
+  height: 100%;
+}
+
+/* 会话列表项样式 */
+.conversation-list .ant-list-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.conversation-list .ant-list-item:hover {
+  background-color: #f5f5f5;
+}
+
+.conversation-list .ant-list-item.selected {
+  background-color: #e6f7ff;
+}
+
+/* 未读消息徽标样式 */
+.ant-badge-count {
+  box-shadow: none;
+  font-weight: normal;
+  font-size: 12px;
+  min-width: 18px;
+  height: 18px;
+  line-height: 18px;
+  padding: 0 4px;
+}
+
+/* 创建群聊和添加好友按钮样式 */
+
+
+/* 消息列表布局 */
+.message-list .ant-list-item {
+  padding: 8px 16px;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+/* 消息包装器 */
+.message-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
+  margin: 0 12px;
+}
+
+/* 消息内容基础样式 */
+.message-content {
+  padding: 8px 12px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  word-break: break-word;
+  color: #333;
+}
+
+/* 消息发送者名称样式 */
+.message-meta {
+  font-size: 12px;
+  margin-bottom: 4px;
+  color: #666;
+}
+
+/* 消息时间样式 */
+.message-time {
+  font-size: 12px;
+  color: #999;
+  margin-top: 4px;
+}
+
+/* 其他人的消息样式（左对齐） */
+.message-list .ant-list-item {
+  justify-content: flex-start;
+}
+
+/* 自己的消息样式（右对齐） */
+.message-mine {
+  justify-content: flex-end !important;
+}
+
+.message-mine .message-wrapper {
+  align-items: flex-end;
+}
+
+.message-mine .message-content {
+  background-color: #1890ff;
+  color: #fff;
+}
+
+.message-mine .message-meta {
+  text-align: right;
+}
+
+.message-mine .message-time {
+  text-align: right;
+}
+
+/* 音频消息样式 */
+.audio-message {
+  max-width: 200px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.message-mine .audio-message {
+  background-color: #1890ff;
+}
+
+/* 文件链接样式 */
+.message-mine .message-content a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* 录音按钮样式 */
+.recording {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 媒体消息容器 */
+.media-wrapper {
+  max-width: 300px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* 图片消息样式 */
+.message-image {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+.message-image:hover {
+  transform: scale(1.02);
+}
+
+/* 视频消息样式 */
+.message-video {
+  max-width: 100%;
+  border-radius: 4px;
+  background-color: #000;
+}
+
+/* 调整文件消息样式 */
+.message-content a {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  text-decoration: none;
+  color: #1890ff;
+}
+
+.message-mine .message-content a {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* 媒体消息在暗色背景下的样式 */
+.message-mine .media-wrapper {
+  background-color: #fff;
+  padding: 2px;
+}
+
+/* 空消息提示样式 */
+.empty-message-container {
+  height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+  text-align: center;
+  color: #8c8c8c;
+  background: #f5f5f5;
+  margin: 0 40px;
+}
+
+.empty-message-main {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #1890ff;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.empty-message-disclaimer {
+  max-width: 600px;
+  font-size: 14px;
+  color: #999;
+  line-height: 1.8;
+  margin-top: 20px;
+  padding: 20px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.empty-message-contact {
+  color: #1890ff;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.empty-message-warning {
+  color: #ff4d4f;
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+/* 修改头部样式 */
+.chat-header {
+  height: 64px;
+  line-height: 64px;
+  padding: 0 24px;
+  background: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+}
+
+/* 修改 Tabs 样式 */
+.ant-tabs-nav {
+  padding: 0 20px;  /* 增加左右内边距 */
+}
+
+.ant-tabs-tab {
+  margin-left: 20px !important;  /* 增加标签左边距 */
+  padding: 12px 0 !important;  /* 调整标签内边距 */
+}
+
+.ant-tabs-tab:first-child {
+  margin-left: 0 !important;  /* 第一个标签不需要左边距 */
+}
+
+/* 调整标签文字样式 */
+.ant-tabs-tab-btn {
+  font-size: 15px;  /* 调整文字大小 */
+  color: #666;  /* 调整文字颜色 */
+}
+
+/* 选中标签的样式 */
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #1890ff;  /* 选中时的文字颜色 */
+  font-weight: 500;  /* 选中时的文字粗细 */
+}
+
+/* 调整标签栏底部边框 */
+.ant-tabs-nav::before {
+  border-bottom: 1px solid #e8e8e8;
+} 

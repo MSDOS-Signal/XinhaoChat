@@ -1,0 +1,20 @@
+server:
+  port: 9191
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3307/chat_app?serverTimezone=GMT%2b8&useUnicode=true&characterEncoding=utf-8&allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: Key-1122
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.xinhao.backend.entity
+  global-config:
+    db-config:
+      table-prefix: 
+      id-type: auto

@@ -1,0 +1,239 @@
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #2b3a67 0%, #1a2238 100%);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 背景动画效果 */
+.login-container::before,
+.login-container::after {
+  content: '';
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  border-radius: 50%;
+  background: linear-gradient(220deg, rgba(103, 178, 255, 0.1), rgba(255, 255, 255, 0.05));
+  animation: float 20s infinite linear;
+  opacity: 0.3;
+}
+
+.login-container::before {
+  top: -20%;
+  right: -10%;
+  animation-delay: -5s;
+}
+
+.login-container::after {
+  bottom: -20%;
+  left: -10%;
+  animation-duration: 25s;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.brand-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.login-title {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.form-grid {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+/* 输入框样式 */
+.ant-input-affix-wrapper {
+  height: 48px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 0 16px;
+  transition: all 0.3s ease;
+}
+
+.ant-input-affix-wrapper:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.ant-input-affix-wrapper-focused,
+.ant-input-affix-wrapper:focus {
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.form-icon {
+  color: #666666;
+  font-size: 16px;
+}
+
+.ant-input {
+  background: transparent !important;
+  color: #333333 !important;
+  font-size: 15px;
+}
+
+.ant-input::placeholder {
+  color: #999999 !important;
+}
+
+/* 按钮样式 */
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.submit-button {
+  height: 48px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a2238;
+  width: 100%;
+  transition: all 0.3s ease;
+  text-transform: none;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: translateX(-100%);
+  transition: 0.5s;
+}
+
+.submit-button:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.submit-button:hover::before {
+  transform: translateX(100%);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+/* 链接按钮样式 */
+.register-link {
+  text-align: center;
+  margin-top: 24px;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.register-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.login-link {
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.login-link:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* 错误提示 */
+.ant-form-item-explain-error {
+  font-size: 13px;
+  color: #ff6b6b;
+  margin-top: 6px;
+  padding-left: 4px;
+}
+
+/* 密码框图标 */
+.ant-input-password-icon {
+  color: #666666 !important;
+}
+
+.ant-input-password-icon:hover {
+  color: #333333 !important;
+}
+
+/* 响应式设计 */
+@media (max-width: 576px) {
+  .login-card {
+    padding: 30px 24px;
+    margin: 16px;
+  }
+  
+  .login-title {
+    font-size: 28px;
+  }
+}
+
+/* 动画效果 */
+@keyframes float {
+  from {
+    transform: rotate(0deg) translate(50px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(50px) rotate(-360deg);
+  }
+}
+
+/* 修改密码框内的文本颜色 */
+.ant-input-password input {
+  background: transparent !important;
+  color: #333333 !important;
+} 
