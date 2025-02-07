@@ -1,18 +1,33 @@
 # XinhaoChat
-自制的聊天软件以及配套管理系统  直接加好友，在会话可以私聊，也可以创建群聊
-本人大一新生，职高出身，已经学了四年计算机了，从幼儿园到现在一直和计算机在一起，本人到了大学不想颓废
-于是乎写了个聊天软件和后台管理系统
-聊天软件技术react nodejs
-后台管理系统vue springboot
-数据库mysql
-bug希望有的大佬能修复一下，可以的话求联系，一起开发
-微信DXH08060927
-注册页面
-<img width="938" alt="1738910135144" src="https://github.com/user-attachments/assets/19cbabe5-d9ac-4272-9156-b1128c808e20" />
-后台管理页面
-![image](https://github.com/user-attachments/assets/a158853b-fd15-4e58-a3d8-315c5cb66a11)
-![image](https://github.com/user-attachments/assets/2b37b7c2-8940-4581-ba5c-0534c4c2e3df)
-![image](https://github.com/user-attachments/assets/522f3003-1ec7-43ef-9871-e17e0e78add4)
-聊天界面
-<img width="553" alt="1738910408321" src="https://github.com/user-attachments/assets/74b6cc74-a555-4014-b288-a99031e78adf" />
-就是没做删除好友 删除群聊 退出群聊（删除做到管理员 后台管理系统了）
+## 注意准备数据库！！创建一个chat_app数据库，然后我设置的是3307端口，但是默认是3306端口，我设置的用户名是root，密码是Key-1122，所以你们要去改一下源代码！！！！！！
+
+![image](https://github.com/user-attachments/assets/22acac05-8325-4111-a70d-1882a036c6ff)
+
+![image](https://github.com/user-attachments/assets/bf53b7bf-8a35-401b-86b7-6c3b04dd830a)
+
+
+<------------------>
+
+## 聊天启动
+## 在XhChat里的server文件夹下启动服务器端 终端输入
+
+## `node server.js`
+
+
+## 然后启动前端——在client文件夹下，终端输入
+
+## `npm start`
+
+## 一开始是进入localhost:3000/chat，请自己在浏览器url栏把/chat改成/login
+<------------------>
+## 后台管理系统是XhchatManage里
+
+## 启动后端，在backend 终端输入
+
+
+## `mvn spring-boot:run`
+
+## 启动前端，在vue里打开终端输入
+
+## `npm run serve`
+
